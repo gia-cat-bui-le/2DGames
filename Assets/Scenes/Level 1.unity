@@ -1318,7 +1318,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d0e6218c913584ea2f9e0a4f79b2da, type: 3}
+  m_Script: {fileID: 11500000, guid: b165b8128671a3a47ba5be0081ecf27d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1396875529 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9150713944329721491, guid: 676d63b512a3fba4f9c20a2ae9d60bb2, type: 3}
+  m_PrefabInstance: {fileID: 1501667597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1501667597
@@ -1410,6 +1421,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3790037514328708475, guid: 676d63b512a3fba4f9c20a2ae9d60bb2, type: 3}
+      propertyPath: iconImage
+      value: 
+      objectReference: {fileID: 1396875529}
+    - target: {fileID: 3790037514328708475, guid: 676d63b512a3fba4f9c20a2ae9d60bb2, type: 3}
       propertyPath: cooldownText
       value: 
       objectReference: {fileID: 2070078392}
@@ -1434,11 +1449,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 676d63b512a3fba4f9c20a2ae9d60bb2, type: 3}
---- !u!4 &1795999677 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8882747684449390441, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
-  m_PrefabInstance: {fileID: 2728233889856270774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1893095927 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2236535182218672050, guid: 676d63b512a3fba4f9c20a2ae9d60bb2, type: 3}
@@ -1452,7 +1462,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d0e6218c913584ea2f9e0a4f79b2da, type: 3}
+  m_Script: {fileID: 11500000, guid: b165b8128671a3a47ba5be0081ecf27d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1893095929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9150713944329721491, guid: 676d63b512a3fba4f9c20a2ae9d60bb2, type: 3}
+  m_PrefabInstance: {fileID: 4552516352134573962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1929545328
@@ -1563,14 +1584,6 @@ PrefabInstance:
       propertyPath: shieldIcon
       value: 
       objectReference: {fileID: 1396875528}
-    - target: {fileID: 562376279289345332, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
-      propertyPath: shieldPoint
-      value: 
-      objectReference: {fileID: 1795999677}
-    - target: {fileID: 562376279289345332, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
-      propertyPath: shieldPrefab
-      value: 
-      objectReference: {fileID: 1813892253075206922, guid: d5c57858903f87948b85aaffded4ee48, type: 3}
     - target: {fileID: 1724845214778683359, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.75
@@ -1634,6 +1647,10 @@ PrefabInstance:
     - target: {fileID: 5149343690445141951, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447711448020162938, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
+      propertyPath: isInvincible
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8834632447878152290, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
       propertyPath: firePoint
@@ -1752,6 +1769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3790037514328708475, guid: 676d63b512a3fba4f9c20a2ae9d60bb2, type: 3}
+      propertyPath: iconImage
+      value: 
+      objectReference: {fileID: 1893095929}
     - target: {fileID: 3790037514328708475, guid: 676d63b512a3fba4f9c20a2ae9d60bb2, type: 3}
       propertyPath: cooldownText
       value: 
