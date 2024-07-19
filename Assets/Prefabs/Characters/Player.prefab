@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 4333482618138226235}
   - component: {fileID: 9157599334999229004}
   - component: {fileID: 562376279289345332}
+  - component: {fileID: 7447711448020162938}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -213,7 +214,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5149343690445141951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02b9f4aefbe8bba4293319c9372f28c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d70125cca348024a8db32e8c9130bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
@@ -322,7 +323,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5149343690445141951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a2bcee728287f459f04f9cc7672d4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 971c56040005d7a44aea75e87799026e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   castFilter:
@@ -387,7 +388,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5149343690445141951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040895fc6b682604187142307f6e21a8, type: 3}
+  m_Script: {fileID: 11500000, guid: e3198677bb08ca84a9d825766ede5b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 7237912463899626335}
@@ -402,6 +403,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 5149343690445141951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43e23d36dda151843b0607a097661c4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d05aea477c0f1345a969f3c81239e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shieldPoint: {fileID: 8882747684449390441}
+  shieldPrefab: {fileID: 1813892253075206922, guid: d5c57858903f87948b85aaffded4ee48, type: 3}
+  shieldIcon: {fileID: 0}
+  shieldDuration: 1
+--- !u!114 &7447711448020162938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5149343690445141951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b7c79f0b91eb14a9b1f10a73ef70c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5149343690445141951}
+  _maxHealth: 0
+  _health: 100
+  _isAlive: 1
+  isInvincible: 0
+  invincibilityTime: 0.25

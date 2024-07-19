@@ -15,13 +15,23 @@ public class PlayerController : MonoBehaviour
 
     public float CurrentMoveSpeed { get
         {
-            if(IsMoving)
+            if (CanMove)
             {
-                return walkSpeed;
-            } else
+                if (IsMoving)
+                {
+                    return walkSpeed;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
             {
+                // movement lock
                 return 0;
             }
+            
         } }
 
     [SerializeField]
@@ -49,6 +59,23 @@ public class PlayerController : MonoBehaviour
             }
             _isFacingRight = value;
         } 
+    }
+
+    public bool CanMove
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canMove);
+
+        }
+    }
+
+    public bool IsAlive
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.isAlive);
+        }
     }
 
     Rigidbody2D rb;
@@ -80,9 +107,17 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
 
-        IsMoving = moveInput != Vector2.zero;
+        if (IsAlive )
+        {
+            IsMoving = moveInput != Vector2.zero;
 
-        SetFacingDirection(moveInput);
+            SetFacingDirection(moveInput);
+        }
+        else
+        {
+            IsMoving = false;
+        }
+        
     }
 
     private void SetFacingDirection(Vector2 moveInput)
@@ -99,4 +134,5 @@ public class PlayerController : MonoBehaviour
             isFacingRight = false;
         }
     }
+
 }

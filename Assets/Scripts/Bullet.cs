@@ -10,6 +10,9 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject impactEffect;
 
+    // add this to enemy weapon script
+    public int damage = 20;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,13 @@ public class Bullet : MonoBehaviour
         GameObject effect = Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effect, 0.45f);
         Destroy(gameObject);
+
+        //TODO: copy this to Enemy's weapon script
+        Damageable player = hitInfo.GetComponent<Damageable>();
+        if (player != null)
+        {
+            player.Hit(damage);
+        }
     }
 
     private void OnBecameInvisible()

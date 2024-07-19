@@ -158,9 +158,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3171718992913476693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a1af966910454449858d04d7c880ffc, type: 3}
+  m_Script: {fileID: 11500000, guid: 56dcec6fbcf82b24fa0e149747b7b7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: 1848976439212807918}
   impactEffect: {fileID: 1135962310514442841, guid: acc54823536dbf84685e2c752b8e7cbb, type: 3}
+  damage: 20
