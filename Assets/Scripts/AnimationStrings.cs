@@ -11,4 +11,5 @@ internal class AnimationStrings
     internal static string isOnWall = "isOnWall";
     internal static string isAlive = "isAlive";
     internal static string canMove = "canMove";
+    internal static string isStunned = "isStunned";
 }

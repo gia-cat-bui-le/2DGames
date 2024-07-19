@@ -77,6 +77,14 @@ public class PlayerController : MonoBehaviour
             return animator.GetBool(AnimationStrings.isAlive);
         }
     }
+    public bool IsStunned
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.isStunned);
+
+        }
+    }
 
     Rigidbody2D rb;
     Animator animator;
@@ -107,7 +115,7 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
 
-        if (IsAlive )
+        if (IsAlive && !IsStunned)
         {
             IsMoving = moveInput != Vector2.zero;
 
