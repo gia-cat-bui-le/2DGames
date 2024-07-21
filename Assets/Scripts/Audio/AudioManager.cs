@@ -13,7 +13,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip shield;
     public AudioClip pause;
     public AudioClip click;
-    public AudioClip wallTouch;
 
     private void Start()
     {

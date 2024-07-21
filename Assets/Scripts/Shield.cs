@@ -11,11 +11,18 @@ public class Shield : MonoBehaviour
 
     private GameObject activeShield;
 
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire2") && shieldIcon.IsReady())
         {
+            audioManager.PlaySFX(audioManager.shield);
             Shielding();
         }
     }

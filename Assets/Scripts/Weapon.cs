@@ -9,11 +9,19 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public AbilityIcon abilityIcon;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1") && abilityIcon.IsReady())
         {
+            audioManager.PlaySFX(audioManager.attack);
             Shoot();
         }
     }

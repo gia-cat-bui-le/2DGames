@@ -10,6 +10,8 @@ public class Damageable : MonoBehaviour
     [SerializeField]
     private float _maxHealth;
 
+    AudioManager audioManager;
+
     public float maxHealth
     {
         get
@@ -93,6 +95,7 @@ public class Damageable : MonoBehaviour
 
         if (!IsAlive)
         {
+            audioManager.PlaySFX(audioManager.death);
             player.GetComponent<SpriteRenderer>().color = Color.red;
         }
     }
@@ -103,6 +106,7 @@ public class Damageable : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
         playerController = GetComponent<PlayerController>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     public void Hit(int damage)
