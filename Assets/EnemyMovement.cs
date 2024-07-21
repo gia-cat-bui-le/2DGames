@@ -5,11 +5,15 @@ public class EnemyMovement : MonoBehaviour
 {
     public float flySpeed = 3f;
     public float directionChangeInterval = 2f; // Interval in seconds for changing direction
+    public GameObject projectilePrefab; // Reference to the projectile prefab
+    public float shootInterval = 1f; // Interval in seconds between each shot
+
     private Rigidbody2D rb;
     private Vector2 flyDirection; // Current flying direction
     private float screenWidth;
     private float screenHeight;
     private float nextDirectionChangeTime;
+    private float nextShootTime;
 
     private void Awake()
     {
@@ -18,6 +22,7 @@ public class EnemyMovement : MonoBehaviour
         screenHeight = Camera.main.orthographicSize;
         nextDirectionChangeTime = Time.time + directionChangeInterval;
         flyDirection = GetRandomDirection();
+        nextShootTime = Time.time + shootInterval;
     }
 
     private void FixedUpdate()
@@ -30,6 +35,12 @@ public class EnemyMovement : MonoBehaviour
             ChangeFlyDirection();
             nextDirectionChangeTime = Time.time + directionChangeInterval;
         }
+
+        if (Time.time >= nextShootTime)
+        {
+            ShootProjectile();
+            nextShootTime = Time.time + shootInterval;
+        }
     }
 
     private void MoveEnemy()
@@ -39,7 +50,6 @@ public class EnemyMovement : MonoBehaviour
         rb.velocity = velocity;
     }
 
-    // Method to change the flying direction randomly within the upper half of the screen
     private void ChangeFlyDirection()
     {
         flyDirection = GetRandomDirection();
@@ -95,5 +105,11 @@ public class EnemyMovement : MonoBehaviour
 
         transform.position = position;
     }
-}
 
+    private void ShootProjectile()
+    {
+        Debug.Log("ShootProjectile method accessed");
+        Vector2 shootPosition = new Vector2(transform.position.x, transform.position.y);
+        Instantiate(projectilePrefab, shootPosition, Quaternion.identity);
+    }
+}
