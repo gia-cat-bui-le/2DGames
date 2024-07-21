@@ -41,7 +41,7 @@ namespace UI
 
         public void OpenLevel(string levelName)
         {
-            SceneManager.LoadScene(levelName, LoadSceneMode.Additive);
+            SceneManager.LoadScene(levelName, LoadSceneMode.Single);
         }
     }
 }
