@@ -5,14 +5,26 @@ public class Projectile : MonoBehaviour
     public float speed = 5f;
     public int damage = 1;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Start()
     {
-        // Handle damage to ground or other objects
-        // Assuming ground or other objects have a tag "Ground"
-        Destroy(gameObject);
+        // Destroy the projectile after a certain time to prevent it from existing indefinitely
+        Destroy(gameObject, 5f); // Adjust the time as needed
     }
-    void Update()
+
+    private void FixedUpdate()
     {
-        transform.Translate(Vector2.down * speed * Time.deltaTime);
+        // Move the projectile downwards
+        transform.Translate(Vector2.down * speed * Time.fixedDeltaTime);
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+        // Handle collision with ground or other objects
+            // Apply damage if needed, e.g., to the player or enemy
+            // collision.gameObject.GetComponent<Health>()?.TakeDamage(damage);
+
+            // Destroy the projectile on collision
+            //Destroy(gameObject);
+    //}
 }
+

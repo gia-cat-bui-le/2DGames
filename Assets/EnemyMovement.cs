@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour
     public float flySpeed = 3f;
     public float directionChangeInterval = 2f; // Interval in seconds for changing direction
     public GameObject projectilePrefab; // Reference to the projectile prefab
-    public float shootInterval = 1f; // Interval in seconds between each shot
+    public float shootCooldown = 1f; // Cooldown in seconds between each shot
 
     private Rigidbody2D rb;
     private Vector2 flyDirection; // Current flying direction
@@ -22,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
         screenHeight = Camera.main.orthographicSize;
         nextDirectionChangeTime = Time.time + directionChangeInterval;
         flyDirection = GetRandomDirection();
-        nextShootTime = Time.time + shootInterval;
+        nextShootTime = Time.time; // Start shooting immediately
     }
 
     private void FixedUpdate()
@@ -39,7 +39,7 @@ public class EnemyMovement : MonoBehaviour
         if (Time.time >= nextShootTime)
         {
             ShootProjectile();
-            nextShootTime = Time.time + shootInterval;
+            nextShootTime = Time.time + shootCooldown;
         }
     }
 
@@ -108,8 +108,17 @@ public class EnemyMovement : MonoBehaviour
 
     private void ShootProjectile()
     {
-        Debug.Log("ShootProjectile method accessed");
-        Vector2 shootPosition = new Vector2(transform.position.x, transform.position.y);
+        // Ensure the projectilePrefab is not null
+        if (projectilePrefab == null)
+        {
+            Debug.LogError("Projectile prefab is not assigned!");
+            return;
+        }
+
+        // Calculate the shoot position and instantiate the projectile
+        Vector2 shootPosition = new Vector2(transform.position.x, transform.position.y - 1); // Offset position downwards
         Instantiate(projectilePrefab, shootPosition, Quaternion.identity);
+
+        Debug.Log("Projectile instantiated at position: " + shootPosition);
     }
 }
