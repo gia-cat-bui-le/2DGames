@@ -334,6 +334,11 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!224 &782668981 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 245111046152504592, guid: dd700c3eadd942d45ad28916085cb13b, type: 3}
+  m_PrefabInstance: {fileID: 1622604430}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &813433847
 GameObject:
   m_ObjectHideFlags: 0
