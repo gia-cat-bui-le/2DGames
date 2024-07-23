@@ -23,7 +23,7 @@ public class Damageable : MonoBehaviour
     }
 
     [SerializeField]
-    private float _health = 100;
+    private float _health = 5;
 
     public float Health
     {

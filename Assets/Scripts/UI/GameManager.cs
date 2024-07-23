@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject player;   // replace later
-    public int maxHealth = 5;
-    public int curHealth = 5;
+    //public GameObject player;   // replace later
+    public Damageable playerInfo;
     public HealthBar healthBar;
 
     public float cooldownTime = 3;  // replace by player

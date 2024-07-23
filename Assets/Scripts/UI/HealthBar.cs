@@ -9,9 +9,10 @@ public class HealthBar : MonoBehaviour
 
     public void UpdateHealthBar()
     {
+
         for (int i = 0; i < healthUnits.Count; i++)
         {
-            healthUnits[i].SetHealthImage(i < gameManager.curHealth);
+            healthUnits[i].SetHealthImage(i < gameManager.playerInfo.Health);
         }
     }
 }
