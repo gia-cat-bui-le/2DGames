@@ -6,7 +6,7 @@ public class AbilityIcon : MonoBehaviour
 {
     public Image iconImage;
     public Image cooldownOverlay;
-    public TextMeshProUGUI cooldownText;
+    //public TextMeshProUGUI cooldownText;
     public float cooldownTime = 5f;
     private float cooldownTimer = 0f;
 
@@ -43,13 +43,13 @@ public class AbilityIcon : MonoBehaviour
     private void UpdateCooldownDisplay()
     {
         cooldownOverlay.fillAmount = cooldownTimer / cooldownTime;
-        cooldownText.text = Mathf.Ceil(cooldownTimer).ToString();
+        //cooldownText.text = Mathf.Ceil(cooldownTimer).ToString();
     }
 
     private void ResetCooldown()
     {
         cooldownTimer = 0;
         cooldownOverlay.gameObject.SetActive(false);
-        cooldownText.text = "";
+       // cooldownText.text = "";
     }
 }
