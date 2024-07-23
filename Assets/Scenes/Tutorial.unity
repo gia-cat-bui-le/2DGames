@@ -2824,6 +2824,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1717217292943868424, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8152885008353434921}
+    - targetCorrespondingSourceObject: {fileID: 1717217292943868424, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8152885008353434926}
     - targetCorrespondingSourceObject: {fileID: 2902851512440258915, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8152885008353434920}
@@ -2859,13 +2862,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8152885008353434919}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53a6230df521ad540a04f3274593d496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   imageCooldown: {fileID: 0}
   gameManager: {fileID: 813433849}
+--- !u!114 &8152885008353434926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8152885008353434919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b165b8128671a3a47ba5be0081ecf27d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iconImage: {fileID: 0}
+  cooldownOverlay: {fileID: 0}
+  cooldownTime: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
