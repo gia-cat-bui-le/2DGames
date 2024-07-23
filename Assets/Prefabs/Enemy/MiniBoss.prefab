@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8751374885998114483}
   - component: {fileID: 7100078832254577149}
   - component: {fileID: 7049852275502296429}
+  - component: {fileID: 7228410027974765435}
   m_Layer: 0
   m_Name: MiniBoss
   m_TagString: Untagged
@@ -151,7 +152,7 @@ MonoBehaviour:
   flySpeed: 3
   directionChangeInterval: 2
   projectilePrefab: {fileID: 6481770576653432559, guid: ade55a19c2772024eb210e92afd26530, type: 3}
-  shootInterval: 1
+  shootCooldown: 4
 --- !u!70 &7049852275502296429
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -181,9 +182,25 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008778053, y: 0.004389024}
   m_Size: {x: 0.0827532, y: 0.11962094}
   m_Direction: 0
+--- !u!114 &7228410027974765435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5273249915482526164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f842fe732ed28049b39dd354e4d9b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _health: 100
+  _isAlive: 1
+  enemy: {fileID: 5273249915482526164}
