@@ -69,6 +69,10 @@ public class GetDamaged : MonoBehaviour
     private void Die()
     {
         Debug.Log("Enemy died!");
-        //Destroy(enemy); // Destroy the enemy game object
+        // Rotate the enemy to lie down horizontally
+        //transform.rotation = Quaternion.Euler(0, 0, 90);
+
+        // Optionally, destroy the enemy after some time to give a chance to see the rotation
+        Destroy(enemy, 10f); // Adjust the delay as needed
     }
 }
