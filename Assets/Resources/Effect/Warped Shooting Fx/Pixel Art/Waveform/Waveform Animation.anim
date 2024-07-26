@@ -6,8 +6,13 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: Shooting UI
   serializedVersion: 7
+=======
+  m_Name: Waveform Animation
+  serializedVersion: 6
+>>>>>>> add-enemy
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -18,6 +23,7 @@ AnimationClip:
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
+<<<<<<< HEAD
   - serializedVersion: 2
     curve:
     - time: 0
@@ -34,6 +40,22 @@ AnimationClip:
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 2
   m_SampleRate: 60
+=======
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 6ce7d758dac494cc393bd4437dfdb24e, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: e240c40da139d4e54aee2efe4960bec3, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 36a183f10dadc491088dc8d1bbb60f36, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 07f154720f2cc47c094b940d9d2b3b84, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 12
+>>>>>>> add-enemy
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -42,6 +64,7 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 0
+<<<<<<< HEAD
       attribute: 2015549526
       script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
       typeID: 114
@@ -49,6 +72,13 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+=======
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+>>>>>>> add-enemy
     pptrCurveMapping:
     - {fileID: 21300000, guid: 6ce7d758dac494cc393bd4437dfdb24e, type: 3}
     - {fileID: 21300000, guid: e240c40da139d4e54aee2efe4960bec3, type: 3}
@@ -59,7 +89,11 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
+<<<<<<< HEAD
     m_StopTime: 0.51666665
+=======
+    m_StopTime: 0.33333334
+>>>>>>> add-enemy
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

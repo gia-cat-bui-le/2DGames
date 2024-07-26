@@ -7,7 +7,11 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Hit-1 Animation
+<<<<<<< HEAD
   serializedVersion: 7
+=======
+  serializedVersion: 6
+>>>>>>> add-enemy
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -18,8 +22,12 @@ AnimationClip:
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
+<<<<<<< HEAD
   - serializedVersion: 2
     curve:
+=======
+  - curve:
+>>>>>>> add-enemy
     - time: 0
       value: {fileID: 21300000, guid: 27ff21fb9b7ed4079a65bdb8b0fc27c3, type: 3}
     - time: 0.083333336
@@ -34,7 +42,10 @@ AnimationClip:
     path: 
     classID: 212
     script: {fileID: 0}
+<<<<<<< HEAD
     flags: 2
+=======
+>>>>>>> add-enemy
   m_SampleRate: 12
   m_WrapMode: 0
   m_Bounds:
@@ -49,8 +60,11 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+<<<<<<< HEAD
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+=======
+>>>>>>> add-enemy
     pptrCurveMapping:
     - {fileID: 21300000, guid: 27ff21fb9b7ed4079a65bdb8b0fc27c3, type: 3}
     - {fileID: 21300000, guid: 54d143e2b2e3041e8988b21d3e7eb773, type: 3}
@@ -67,7 +81,11 @@ AnimationClip:
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
+<<<<<<< HEAD
     m_LoopTime: 0
+=======
+    m_LoopTime: 1
+>>>>>>> add-enemy
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

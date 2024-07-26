@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -111,8 +111,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 6d25074f51dc65f47a8ec46552bde330
       internalID: 897779821
+=======
+      spriteID: 7d8acc45c41de804194bc5896baf1b45
+      internalID: -1399610284
+>>>>>>> add-enemy
       vertices: []
       indices: 
       edges: []
@@ -132,8 +137,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: a170d8878c443f945b5ebba7492271e4
       internalID: -1233340113
+=======
+      spriteID: 4175474c5a2349a4f907be252714cfe1
+      internalID: 31112184
+>>>>>>> add-enemy
       vertices: []
       indices: 
       edges: []
@@ -153,8 +163,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 5a8bfe1148173f14cb476ab88e59338b
       internalID: -266172655
+=======
+      spriteID: bbeb75fc3fcc9c84aac3443c76177826
+      internalID: 2098609625
+>>>>>>> add-enemy
       vertices: []
       indices: 
       edges: []
@@ -174,8 +189,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: eb12e6e17cc835846be512eba4236498
       internalID: -138761003
+=======
+      spriteID: 409d11903d111db4186c08483d5a122a
+      internalID: -1690917983
+>>>>>>> add-enemy
       vertices: []
       indices: 
       edges: []
@@ -191,10 +211,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD
       MudWyvern_0: 897779821
       MudWyvern_1: -1233340113
       MudWyvern_2: -266172655
       MudWyvern_3: -138761003
+=======
+      MudWyvern_0: -1399610284
+      MudWyvern_1: 31112184
+      MudWyvern_2: 2098609625
+      MudWyvern_3: -1690917983
+>>>>>>> add-enemy
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
