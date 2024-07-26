@@ -1,19 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     //public GameObject player;   // replace later
     public Damageable playerInfo;
+    public GetDamaged enemyInfo;
     public HealthBar healthBar;
+    public GameObject WinUI;
+    public GameObject LoseUI;
+    public GameObject enemyHealthUI;
+
+    private TextMeshProUGUI enemyHealthText;
 
     public float cooldownTime = 3;  // replace by player
     public float cooldownTimer = 0; // replace by player
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        LoseUI.SetActive(false);
+        WinUI.SetActive(false);
+
+        if (enemyHealthUI != null)
+        {
+            enemyHealthText = enemyHealthUI.GetComponent<TextMeshProUGUI>();
+        }
+        else
+        {
+            Debug.LogError("Enemy Health UI is not assigned!");
+        }
     }
 
     // Update is called once per frame
@@ -28,8 +46,24 @@ public class GameManager : MonoBehaviour
         {
             UseSpell();
         }
+        if (!playerInfo.IsAlive && enemyInfo.IsAlive)
+        {
+            LoseUI.SetActive(true);
+            WinUI.SetActive(false);
+        }
+        else if (playerInfo.IsAlive && !enemyInfo.IsAlive)
+        {
+            LoseUI.SetActive(false);
+            WinUI.SetActive(true);
+        }
+
+        // Update the enemy health text
+        if (enemyHealthText != null && enemyInfo != null)
+        {
+            enemyHealthText.text = "Enemy Health: " + enemyInfo.Health.ToString();
+        }
     }
-    
+
     // remove later
     public void UseSpell()
     {
