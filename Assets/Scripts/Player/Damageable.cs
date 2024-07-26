@@ -6,6 +6,7 @@ public class Damageable : MonoBehaviour
 {
     Animator animator;
     public GameObject player;
+    Shield shield;
 
     [SerializeField]
     private float _maxHealth;
@@ -64,7 +65,15 @@ public class Damageable : MonoBehaviour
 
     private void Update()
     {
-       if (isInvincible)
+        //if (!shield.activeShield)
+        //{
+        //    Debug.Log("Not Shielding");
+        //}
+        //else
+        //{
+        //    Debug.Log("Shielding");
+        //}
+        if (isInvincible)
         {
             if (timeSinceHit > invincibilityTime)
             {
@@ -103,11 +112,12 @@ public class Damageable : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
         playerController = GetComponent<PlayerController>();
+        shield = GameObject.FindGameObjectWithTag("Player").GetComponent<Shield>();
     }
 
     public void Hit(int damage)
     {
-        if (IsAlive && !isInvincible) 
+        if (IsAlive && !isInvincible && !shield.activeShield) 
         {
             Health -= damage;
             isInvincible = true;
@@ -143,6 +153,19 @@ public class Damageable : MonoBehaviour
         if (playerController != null)
         {
             playerController.enabled = false; // Disable player movement
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("enemyBullet"))
+        {
+            Hit(1);
+            Debug.Log("Player - Getting hit. Current Health: " + Health);
+            //Destroy(collision.gameObject); // Destroy the projectile on collision
+        }
+        else
+        {
+            Debug.Log("Player - Getting hit error: " + collision.gameObject.tag);
         }
     }
 }

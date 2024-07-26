@@ -55,7 +55,6 @@ public class GetDamaged : MonoBehaviour
         if (IsAlive)
         {
             Health -= damage;
-            Debug.Log("Current Health: " + Health);
         }
     }
 
@@ -63,14 +62,14 @@ public class GetDamaged : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("playerBullet"))
         {
-            Debug.Log("Getting hit. Current Health: " + Health);
             Hit(20);
+            Debug.Log("Enemy - Getting hit. Current Health: " + Health);
             //Destroy(collision.gameObject); // Destroy the projectile on collision
         }
-        else
-        {
-            Debug.Log("Getting hit error: " + collision.gameObject.tag);
-        }
+        //else
+        //{
+        //    Debug.Log("Enemy - Getting hit error: " + collision.gameObject.tag);
+        //}
     }
 
     private void Die()

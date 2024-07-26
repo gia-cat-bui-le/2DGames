@@ -153,6 +153,6 @@ public class EnemyMovement : MonoBehaviour
         Vector2 shootPosition = new Vector2(transform.position.x, transform.position.y - 1); // Offset position downwards
         Instantiate(projectilePrefab, shootPosition, Quaternion.identity);
 
-        Debug.Log("Projectile instantiated at position: " + shootPosition);
+        //Debug.Log("Projectile instantiated at position: " + shootPosition);
     }
 }

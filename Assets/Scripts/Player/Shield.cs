@@ -9,11 +9,11 @@ public class Shield : MonoBehaviour
     public AbilityIcon shieldIcon;
     public float shieldDuration = 5f;
 
-    private GameObject activeShield;
+    public GameObject activeShield;
 
     // Update is called once per frame
     void Update()
-    {
+    {    
         if (Input.GetButtonDown("Fire2") && shieldIcon.IsReady())
         {
             Shielding();
@@ -39,4 +39,5 @@ public class Shield : MonoBehaviour
             activeShield = null;
         }
     }
+   
 }
