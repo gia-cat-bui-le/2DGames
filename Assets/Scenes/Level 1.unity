@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4333482618138226235, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5149343690445141951, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2874,6 +2878,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 745496917}
+    - target: {fileID: 1819111401261034989, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2102783406429380948, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
       propertyPath: m_Sprite
       value: 
