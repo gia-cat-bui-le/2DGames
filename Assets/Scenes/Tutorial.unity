@@ -263,6 +263,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79293580}
   m_CullTransparentMesh: 1
+--- !u!114 &189883997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7447711448020162938, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
+  m_PrefabInstance: {fileID: 235115083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b7c79f0b91eb14a9b1f10a73ef70c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &235115083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1074,9 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 609c61d0632c93343b20ecaf7d344632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  maxHealth: 5
-  curHealth: 5
+  playerInfo: {fileID: 189883997}
   healthBar: {fileID: 869273856}
   cooldownTime: 3
   cooldownTimer: 0
@@ -2743,6 +2752,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 745496917}
+    - target: {fileID: 2102783406429380948, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 771f3350e1d1bb24a94613aad09ac3a3, type: 3}
     - target: {fileID: 2311026548874065760, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2791,6 +2804,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3163333650806145578, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 561ca26343cf4834a9ff4675d908688e, type: 3}
     - target: {fileID: 3491831821948166438, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2943,6 +2960,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8786997731847459526, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 15c1aa34841a5a04fb6425e7350280ba, type: 2}
     - target: {fileID: 9044799923400581024, guid: 620af25272793794dbf42aa36a889fc0, type: 3}
       propertyPath: gameManager
       value: 

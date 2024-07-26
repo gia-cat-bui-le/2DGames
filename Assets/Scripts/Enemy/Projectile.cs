@@ -17,14 +17,16 @@ public class Projectile : MonoBehaviour
         transform.Translate(Vector2.down * speed * Time.fixedDeltaTime);
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-        // Handle collision with ground or other objects
-            // Apply damage if needed, e.g., to the player or enemy
-            // collision.gameObject.GetComponent<Health>()?.TakeDamage(damage);
-
-            // Destroy the projectile on collision
-            //Destroy(gameObject);
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Handle collision with ground or other objects
+        //    Apply damage if needed, e.g., to the player or enemy
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+        //Destroy the projectile on collision
+  
+    }
 }
 

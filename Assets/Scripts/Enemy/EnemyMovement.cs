@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     public float directionChangeInterval = 2f; // Interval in seconds for changing direction
     public GameObject projectilePrefab; // Reference to the projectile prefab
     public float shootCooldown = 1f; // Cooldown in seconds between each shot
-    public float verticalOffset = 2f; // Vertical offset above the player's head
+    public float verticalOffset = 10f; // Vertical offset above the player's head
     public float minHorizontalDistance = 1f; // Minimum horizontal distance from the player
     public float verticalMoveAmplitude = 2f; // Amplitude for vertical movement
     public float verticalMoveInterval = 1f; // Interval in seconds for vertical movement change
@@ -153,6 +153,6 @@ public class EnemyMovement : MonoBehaviour
         Vector2 shootPosition = new Vector2(transform.position.x, transform.position.y - 1); // Offset position downwards
         Instantiate(projectilePrefab, shootPosition, Quaternion.identity);
 
-        // Debug.Log("Projectile instantiated at position: " + shootPosition);
+        Debug.Log("Projectile instantiated at position: " + shootPosition);
     }
 }

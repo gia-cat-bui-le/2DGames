@@ -61,9 +61,16 @@ public class GetDamaged : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Getting hit. Current Health: " + Health);
-        Hit(20);
-        //Destroy(collision.gameObject); // Destroy the projectile on collision
+        if (collision.gameObject.CompareTag("playerBullet"))
+        {
+            Debug.Log("Getting hit. Current Health: " + Health);
+            Hit(20);
+            //Destroy(collision.gameObject); // Destroy the projectile on collision
+        }
+        else
+        {
+            Debug.Log("Getting hit error: " + collision.gameObject.tag);
+        }
     }
 
     private void Die()
@@ -73,6 +80,6 @@ public class GetDamaged : MonoBehaviour
         //transform.rotation = Quaternion.Euler(0, 0, 90);
 
         // Optionally, destroy the enemy after some time to give a chance to see the rotation
-        Destroy(enemy, 10f); // Adjust the delay as needed
+        Destroy(enemy, 1f); // Adjust the delay as needed
     }
 }
