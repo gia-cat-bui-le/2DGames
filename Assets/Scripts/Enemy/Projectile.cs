@@ -23,6 +23,11 @@ public class Projectile : MonoBehaviour
         //    Apply damage if needed, e.g., to the player or enemy
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground"))
         {
+            Damageable player = collision.gameObject.GetComponent<Damageable>();
+            if (player != null)
+            {
+                player.Hit(damage);
+            }
             Destroy(gameObject);
         }
         //Destroy the projectile on collision

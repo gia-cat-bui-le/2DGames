@@ -27,11 +27,7 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
 
         //TODO: copy this to Enemy's weapon script
-        Damageable player = hitInfo.GetComponent<Damageable>();
-        if (player != null)
-        {
-            player.Hit(damage);
-        }
+        
     }
 
     private void OnBecameInvisible()

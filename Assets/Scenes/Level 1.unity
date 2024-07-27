@@ -279,10 +279,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb43e758d5ec4424b8f8faeefa13d2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flySpeed: 3
+  flySpeed: 2
   directionChangeInterval: 2
   projectilePrefab: {fileID: 2908488621284057455, guid: 634d7e307e1134bffae3838392d3a884, type: 3}
-  shootCooldown: 1
+  shootCooldown: 3
   verticalOffset: 10
   minHorizontalDistance: 1
   verticalMoveAmplitude: 2
@@ -551,6 +551,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 259110303747520101, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
+      propertyPath: wallLayer.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 259110303747520101, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
+      propertyPath: castFilter.layerMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 562376279289345332, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
       propertyPath: shieldIcon
       value: 
@@ -601,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333482618138226235, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5149343690445141951, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
       propertyPath: m_Name
@@ -1123,6 +1131,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90d9a2cbb3d61034da74f0f808338007, type: 3}
+--- !u!1 &353667036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3559981146157754413, guid: 90d9a2cbb3d61034da74f0f808338007, type: 3}
+  m_PrefabInstance: {fileID: 353667035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &353667037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6047806685547526695, guid: 90d9a2cbb3d61034da74f0f808338007, type: 3}
+  m_PrefabInstance: {fileID: 353667035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &372764604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,6 +3088,8 @@ MonoBehaviour:
   WinUI: {fileID: 708213039}
   LoseUI: {fileID: 1494207372}
   enemyHealthUI: {fileID: 665837609}
+  settingMenu: {fileID: 353667037}
+  volumeMenu: {fileID: 353667036}
   cooldownTime: 3
   cooldownTimer: 0
 --- !u!1001 &814077510

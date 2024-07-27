@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb43e758d5ec4424b8f8faeefa13d2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flySpeed: 3
+  flySpeed: 5
   directionChangeInterval: 2
   projectilePrefab: {fileID: 1816829887842374511, guid: 57eb96f9114ba4e03a263c72ca525a69, type: 3}
   shootCooldown: 1
@@ -861,7 +861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333482618138226235, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5149343690445141951, guid: e2082e0d3b95bc944ac51e4ca5ac71a2, type: 3}
       propertyPath: m_Name
@@ -2482,6 +2482,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &618852957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3559981146157754413, guid: 90d9a2cbb3d61034da74f0f808338007, type: 3}
+  m_PrefabInstance: {fileID: 2850747183024080244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &672700044
 GameObject:
   m_ObjectHideFlags: 0
@@ -3263,6 +3268,8 @@ MonoBehaviour:
   WinUI: {fileID: 607220996}
   LoseUI: {fileID: 1882516874}
   enemyHealthUI: {fileID: 672700044}
+  settingMenu: {fileID: 1101900485}
+  volumeMenu: {fileID: 618852957}
   cooldownTime: 3
   cooldownTimer: 0
 --- !u!1001 &842691840
@@ -3724,6 +3731,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043096599}
   m_CullTransparentMesh: 1
+--- !u!1 &1101900485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6047806685547526695, guid: 90d9a2cbb3d61034da74f0f808338007, type: 3}
+  m_PrefabInstance: {fileID: 2850747183024080244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1170309566 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 245111046152504592, guid: dd700c3eadd942d45ad28916085cb13b, type: 3}

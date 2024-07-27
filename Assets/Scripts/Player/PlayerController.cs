@@ -18,14 +18,7 @@ public class PlayerController : MonoBehaviour
         {
             if (CanMove)
             {
-                if (IsMoving)
-                {
-                    return walkSpeed;
-                }
-                else
-                {
-                    return 0;
-                }
+                return IsMoving ? walkSpeed : 0;
             }
             else
             {
@@ -58,7 +51,6 @@ public class PlayerController : MonoBehaviour
             if (_isFacingRight != value)
             {
                 transform.Rotate(0f, 180f, 0f);
-                //transform.localScale *= new Vector2(-1, 1);
             }
             _isFacingRight = value;
         }
@@ -85,25 +77,30 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        rb.gravityScale = 0; // Vô hiệu hóa trọng lực cho người chơi
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        touchingDirections = GetComponent<TouchingDirections>();
+        rb.gravityScale = 0; // Disable gravity for the player
     }
 
     private void FixedUpdate()
     {
-        // Đặt vận tốc y của Rigidbody2D thành 0 để ngăn người chơi rơi tự do
-        rb.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, 0);
+        Vector2 newVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, 0);
+
+        // Handle wall collision
+        if (touchingDirections.isOnWall)
+        {
+            if (moveInput.x > 0 && !isFacingRight)
+            {
+                // Prevent moving right if hitting the wall on the right
+                newVelocity.x = 0;
+            }
+            else if (moveInput.x < 0 && isFacingRight)
+            {
+                // Prevent moving left if hitting the wall on the left
+                newVelocity.x = 0;
+            }
+        }
+
+        rb.velocity = newVelocity;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -113,7 +110,6 @@ public class PlayerController : MonoBehaviour
         if (IsAlive && !IsStunned)
         {
             IsMoving = moveInput != Vector2.zero;
-
             SetFacingDirection(moveInput);
         }
         else

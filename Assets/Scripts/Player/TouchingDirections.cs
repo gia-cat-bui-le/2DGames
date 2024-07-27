@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TouchingDirections : MonoBehaviour
@@ -17,29 +15,25 @@ public class TouchingDirections : MonoBehaviour
     [SerializeField]
     private bool _isGrounded = true;
 
-    public bool isGrounded { get {
-            return _isGrounded;
-        } private set { 
-            _isGrounded = value;
-            animator.SetBool(AnimationStrings.isGrounded, value);
-        } 
-    }
+    public bool isGrounded { get { return _isGrounded; } private set { _isGrounded = value; animator.SetBool(AnimationStrings.isGrounded, value); } }
 
     [SerializeField]
-    private bool _isOnWall = true;
-    private Vector2 wallCheckDirection => gameObject.transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+    private bool _isOnWall = false;
+    private Vector2 wallCheckDirection => transform.localScale.x > 0 ? Vector2.right : Vector2.left;
 
     public bool isOnWall
     {
-        get
-        {
-            return _isOnWall;
-        }
+        get { return _isOnWall; }
         private set
         {
             _isOnWall = value;
             animator.SetBool(AnimationStrings.isOnWall, value);
         }
+    }
+
+    public bool isFacingRight
+    {
+        get { return transform.localScale.x > 0; }
     }
 
     private void Awake()

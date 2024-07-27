@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public GameObject WinUI;
     public GameObject LoseUI;
     public GameObject enemyHealthUI;
+    public GameObject settingMenu;
+    public GameObject volumeMenu;
 
     private TextMeshProUGUI enemyHealthText;
 
@@ -50,11 +52,15 @@ public class GameManager : MonoBehaviour
         {
             LoseUI.SetActive(true);
             WinUI.SetActive(false);
+            settingMenu.SetActive(false);
+            volumeMenu.SetActive(false);
         }
         else if (playerInfo.IsAlive && !enemyInfo.IsAlive)
         {
             LoseUI.SetActive(false);
             WinUI.SetActive(true);
+            settingMenu.SetActive(false);
+            volumeMenu.SetActive(false);
         }
 
         // Update the enemy health text
