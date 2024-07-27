@@ -64,6 +64,7 @@ public class VolumeSettings : MonoBehaviour
     {
         float volume = musicSlider.value;
         myMixer.SetFloat("music", Mathf.Log10(volume) * 20);
+        Debug.Log("music: " + volume);
         PlayerPrefs.SetFloat("musicVolume", volume);
     }
 
@@ -71,6 +72,7 @@ public class VolumeSettings : MonoBehaviour
     {
         float volume = sfxSlider.value;
         myMixer.SetFloat("sfx", Mathf.Log10(volume) * 20);
+        Debug.Log("sfx: " + volume);
         PlayerPrefs.SetFloat("sfxVolume", volume);
     }
 
@@ -104,10 +106,12 @@ public class VolumeSettings : MonoBehaviour
         // Change the button image  
         if (musicSource.mute)
         {
+            Debug.Log("Music Toggle");
             musicButtonImage.sprite = musicOffSprite;
         }
         else
         {
+            Debug.Log("Music Toggle");
             musicButtonImage.sprite = musicOnSprite;
         }
 
@@ -122,10 +126,12 @@ public class VolumeSettings : MonoBehaviour
         // Change the button image  
         if (SFXSource.mute)
         {
+            Debug.Log("SFX Toggle");
             sfxButtonImage.sprite = sfxOffSprite;
         }
         else
         {
+            Debug.Log("SFX Toggle");
             sfxButtonImage.sprite = sfxOnSprite;
         }
 
